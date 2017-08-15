@@ -1,0 +1,2 @@
+ovirt-4.1,http://resources.ovirt.org/pub/ovirt-4.1/rpm/$distro
+ci-tools,http://resources.ovirt.org/repos/ci-tools/$distro
