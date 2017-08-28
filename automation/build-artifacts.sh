@@ -2,7 +2,7 @@
 
 # WildFly version specification
 version="11.0.0"
-qualifier="Beta1"
+qualifier="CR1"
 
 
 # The name and source of the package
