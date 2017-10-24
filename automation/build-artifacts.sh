@@ -2,7 +2,7 @@
 
 # WildFly version specification
 version="11.0.0"
-qualifier="CR1"
+qualifier="Final"
 
 # Cleanup
 rm -rf exported-artifacts

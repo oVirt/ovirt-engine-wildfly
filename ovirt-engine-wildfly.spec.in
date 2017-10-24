@@ -1,7 +1,7 @@
 %global __jar_repack 0
 Name: ovirt-engine-wildfly
 Version: @VERSION@
-Release: 0.2%{?dist}
+Release: 1%{?dist}
 Summary: WildFly Application Server for oVirt Engine
 Group: Virtualization/Management
 License: ASL 2.0
@@ -29,14 +29,16 @@ function remove_shared_objects () {
       %{buildroot}%{_datadir}/%{name}/modules/system/layers/base \
       -depth \
       -type d \
-      -name "linux-$1" \
+      -name "$1" \
       -exec rm -rf {} \;
 }
+remove_shared_objects solaris-x86_64
+remove_shared_objects solaris-sparcv9
 %ifarch x86_64
-remove_shared_objects i686
+remove_shared_objects linux-i686
 %endif
 %ifarch %{ix86}
-remove_shared_objects x86_64
+remove_shared_objects linux-x86_64
 %endif
 
 # Delete the "rpath" of the remaining shared objects:
@@ -50,6 +52,10 @@ find \
 %{_datadir}
 
 %changelog
+* Tue Oct 24 2017 Martin Perina <mperina@redhat.com> - 11.0.0-1
+- Update to upstream version 11.0.0.Final.
+- Removed Solaris binaries from the package.
+
 * Mon Aug 28 2017 Martin Perina <mperina@redhat.com> - 11.0.0-0.2
 - Update to upstream version 11.0.0.CR1.
 
