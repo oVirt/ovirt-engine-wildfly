@@ -4,6 +4,8 @@
 version="11.0.0"
 qualifier="CR1"
 
+# Cleanup
+rm -rf exported-artifacts
 
 # The name and source of the package
 name="ovirt-engine-wildfly"
