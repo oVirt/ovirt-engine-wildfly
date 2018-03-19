@@ -1,6 +1,6 @@
 coreutils
-dnf-utils
 findutils
 git
 sed
 wget
+yum-utils
