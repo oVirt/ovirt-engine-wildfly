@@ -52,6 +52,9 @@ find \
 %{_datadir}
 
 %changelog
+* Mon Jun 18 2018 Martin Perina <mperina@redhat.com> - 13.0.0-1
+- Update to upstream version 13.0.0.Final
+
 * Tue Oct 24 2017 Martin Perina <mperina@redhat.com> - 11.0.0-1
 - Update to upstream version 11.0.0.Final.
 - Removed Solaris binaries from the package.
