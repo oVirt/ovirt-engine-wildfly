@@ -1,0 +1,4 @@
+distros:
+  - el7
+release_branches:
+  wildfly-10: ovirt-4.1
