@@ -1,7 +1,7 @@
 %global __jar_repack 0
 Name: ovirt-engine-wildfly
 Version: @VERSION@
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: WildFly Application Server for oVirt Engine
 Group: Virtualization/Management
 License: ASL 2.0
@@ -10,6 +10,8 @@ Source: @SRC@
 
 BuildRequires: unzip
 BuildRequires: chrpath
+
+Provides: ovirt-engine-wildfly-13
 
 # Prevent breaking packages that require e.g. libapr-1.so
 AutoReqProv: no
@@ -52,6 +54,10 @@ find \
 %{_datadir}
 
 %changelog
+* Fri Sep 21 2018 Martin Perina <mperina@redhat.com> - 13.0.0-2
+- Add 'Provides: ovirt-engine-wildfly-13' to simplify dependency issues in CI
+  during upgrade of WildFly
+
 * Mon Jun 18 2018 Martin Perina <mperina@redhat.com> - 13.0.0-1
 - Update to upstream version 13.0.0.Final
 
