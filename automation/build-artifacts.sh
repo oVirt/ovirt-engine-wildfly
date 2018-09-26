@@ -1,7 +1,7 @@
 #!/bin/sh -e
 
 # WildFly version specification
-version="13.0.0"
+version="14.0.1"
 qualifier="Final"
 
 # Cleanup
