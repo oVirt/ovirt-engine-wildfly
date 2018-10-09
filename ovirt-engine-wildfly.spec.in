@@ -1,23 +1,24 @@
 %global __jar_repack 0
-Name: ovirt-engine-wildfly
-Version: @VERSION@
-Release: 1%{?dist}
-Summary: WildFly Application Server for oVirt Engine
-Group: Virtualization/Management
-License: ASL 2.0
-URL: http://jbossas.jboss.org
-Source: @SRC@
 
-BuildRequires: unzip
-BuildRequires: chrpath
+Name:		ovirt-engine-wildfly
+Version:	@VERSION@
+Release:	@RELEASE@%{?dist}
+Summary:	WildFly Application Server for oVirt Engine
+Group:		Virtualization/Management
+License:	ASL 2.0
+URL:		http://wildfly.org
+Source:		@SRC@
 
-Provides: ovirt-engine-wildfly-14
+BuildRequires:	unzip
+BuildRequires:	chrpath
 
 # Prevent breaking packages that require e.g. libapr-1.so
-AutoReqProv: no
+AutoReqProv:	no
+
 
 %description
 WildFly Application Server for oVirt Engine.
+
 
 %install
 mkdir -p %{buildroot}%{_datadir}
@@ -50,12 +51,14 @@ find \
     -name '*.so' \
     -exec chrpath --delete {} \;
 
+
 %files
-%{_datadir}
+%{_datadir}/%{name}
+
 
 %changelog
-* Wed Sep 26 2018 Martin Perina <mperina@redhat.com> - 14.0.1-1
-- Update to upstream version 14.0.1.Final
+* Sat Oct 6 2018 Martin Perina <mperina@redhat.com> - 13.0.0-3
+- Removes 'Provides: ovirt-engine-wildfly-13'
 
 * Fri Sep 21 2018 Martin Perina <mperina@redhat.com> - 13.0.0-2
 - Add 'Provides: ovirt-engine-wildfly-13' to simplify dependency issues in CI
