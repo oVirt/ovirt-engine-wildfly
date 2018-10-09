@@ -1,38 +1,22 @@
 #!/bin/sh -e
 
 # WildFly version specification
-version="14.0.1"
-qualifier="Final"
+WF_VERSION="14.0.1"
+WF_QUALIFIER="Final"
+
+# RPM version specification
+RPM_VERSION="${WF_VERSION}"
+RPM_RELEASE="3"
+
+export WF_VERSION WF_QUALIFIER RPM_VERSION RPM_RELEASE
 
 # Cleanup
 rm -rf exported-artifacts
+rm -rf output
 
-# The name and source of the package
-name="ovirt-engine-wildfly"
-src="wildfly-${version}.${qualifier}.zip"
-url="http://download.jboss.org/wildfly/${version}.${qualifier}/${src}"
-
-# Download the source:
-if [ ! -f "${src}" ]
-then
-    wget -O "${src}" "${url}"
-fi
-
-# Generate the spec from the template:
-sed \
-    -e "s/@VERSION@/${version}/g" \
-    -e "s/@QUALIFIER@/${qualifier}/g" \
-    -e "s/@SRC@/${src}/g" \
-    < "${name}.spec.in" \
-    > "${name}.spec"
-
-# Build the source and binary packages:
-rpmbuild \
-    -bs \
-    --define="_sourcedir ${PWD}" \
-    --define="_srcrpmdir ${PWD}/output" \
-    --define="_rpmdir ${PWD}" \
-    "${name}.spec"
+# Build SRPMs
+automation/build-wildfly.sh
+automation/build-wildfly-overlay.sh
 
 # Install any build requirements
 yum-builddep output/*src.rpm

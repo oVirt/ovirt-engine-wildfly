@@ -1,1 +1,4 @@
+output
 ovirt-engine-wildfly.spec
+ovirt-engine-wildfly-overlay.spec
+wildfly*.zip
