@@ -2,4 +2,4 @@ distros:
   - el7
   - fc28
 release_branches:
-  wildfly-13: ovirt-4.2
+  ovirt-4.2: ovirt-4.2
