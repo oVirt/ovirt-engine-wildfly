@@ -27,6 +27,9 @@ install -d -m 0755 "%{buildroot}%{_datadir}/%{name}/modules"
 
 
 %changelog
+* Fri Feb 1 2019 Martin Perina <mperina@redhat.com> 15.0.1-1
+- Initial release for WildFly 15
+
 * Fri Oct 5 2018 Martin Perina <mperina@redhat.com> 14.0.0-2
 - Add WildFly major version to package name
 - Obsolete packages providing overlays for previous WildFly versions
