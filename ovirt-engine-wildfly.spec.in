@@ -57,6 +57,9 @@ find \
 
 
 %changelog
+* Mon Apr 29 2019 Martin Perina <mperina@redhat.com> - 16.0.0-1
+- Update to upstream version 16.0.0.Final
+
 * Fri Feb 1 2019 Martin Perina <mperina@redhat.com> - 15.0.1-1
 - Update to upstream version 15.0.1.Final
 
