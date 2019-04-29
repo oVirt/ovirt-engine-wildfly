@@ -27,6 +27,9 @@ install -d -m 0755 "%{buildroot}%{_datadir}/%{name}/modules"
 
 
 %changelog
+* Mon Apr 29 2019 Martin Perina <mperina@redhat.com> 16.0.0-1
+- Initial release for WildFly 16
+
 * Fri Feb 1 2019 Martin Perina <mperina@redhat.com> 15.0.1-1
 - Initial release for WildFly 15
 
