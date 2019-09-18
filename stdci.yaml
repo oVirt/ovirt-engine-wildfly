@@ -1,6 +1,7 @@
 distros:
   - el7
   - fc29
+  - fc30
 
 release_branches:
   master:
