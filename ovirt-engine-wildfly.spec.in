@@ -57,6 +57,10 @@ find \
 
 
 %changelog
+* Wed Jul 15 2020 Martin Perina <mperina@redhat.com> 19.1.0-2
+- Update to httpclient-4.5.12.jar and httpcore-4.4.13.jar to fix
+  https://issues.apache.org/jira/browse/HTTPCLIENT-2047
+
 * Fri Jun 12 2020 Martin Perina <mperina@redhat.com> - 19.1.0-1
 - Update to upstream version 19.1.0.Final
 

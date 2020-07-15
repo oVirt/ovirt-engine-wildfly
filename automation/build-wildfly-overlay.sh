@@ -17,8 +17,8 @@ spectool --all --get-files --directory "${SRC_DIR}" "${PWD}/${NAME}.spec"
 
 rpmbuild \
     -bs \
-    --define="_sourcedir ${PWD}" \
+    --define="_sourcedir ${SRC_DIR}" \
     --define="_srcrpmdir ${PWD}/output" \
-    --define="_rpmdir ${PWD}" \
+    --define="_rpmdir ${SRC_DIR}" \
     "${PWD}/${NAME}.spec"
 
