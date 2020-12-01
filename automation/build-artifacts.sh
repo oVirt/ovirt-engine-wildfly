@@ -1,12 +1,12 @@
 #!/bin/sh -e
 
 # WildFly version specification
-WF_VERSION="19.1.0"
+WF_VERSION="21.0.2"
 WF_QUALIFIER="Final"
 
 # RPM version specification
 RPM_VERSION="${WF_VERSION}"
-RPM_RELEASE="2"
+RPM_RELEASE="1"
 
 export WF_VERSION WF_QUALIFIER RPM_VERSION RPM_RELEASE
 

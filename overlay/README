@@ -1,5 +1,5 @@
 This directory contains upgraded parts of WildFly, which fix bugs
 affecting oVirt Engine:
 
-* httpclient-4.5.12 and httpcore-4.4.13.jar
-  - Fixes https://issues.apache.org/jira/browse/HTTPCLIENT-2047
+*
+  -
