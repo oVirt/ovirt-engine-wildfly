@@ -57,6 +57,9 @@ find \
 
 
 %changelog
+* Fri Jan 15 2021 Artur Socha <asocha@redhat.com> 22.0.0-1
+- Update to upstream version 22.0.0.Final
+
 * Mon Jan 1 2021 Martin Perina <mperina@redhat.com> 21.0.2-1
 - Update to upstream version 21.0.2.Final
 
