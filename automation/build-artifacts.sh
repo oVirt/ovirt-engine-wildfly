@@ -19,7 +19,7 @@ automation/build-wildfly.sh
 automation/build-wildfly-overlay.sh
 
 # Install any build requirements
-yum-builddep output/*src.rpm
+dnf builddep output/*src.rpm
 
 # Build RPMs
 rpmbuild \
