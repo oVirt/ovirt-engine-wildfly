@@ -3,12 +3,12 @@
 # The name and source of the package
 name="ovirt-engine-wildfly"
 src="wildfly-${WF_VERSION}.${WF_QUALIFIER}.zip"
-url="http://download.jboss.org/wildfly/${WF_VERSION}.${WF_QUALIFIER}/${src}"
+url="https://download.jboss.org/wildfly/${WF_VERSION}.${WF_QUALIFIER}/${src}"
 
 # Download the source:
 if [ ! -f "${src}" ]
 then
-    wget -O "${src}" "${url}"
+    curl -o "${src}" "${url}"
 fi
 
 # Generate the spec from the template:
