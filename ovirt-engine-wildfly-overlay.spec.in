@@ -27,6 +27,9 @@ install -d -m 0755 "%{buildroot}%{_datadir}/%{name}/modules"
 
 
 %changelog
+* Mon Oct 11 2021 Artur Socha <asocha@redhat.com> 24.0.1-1
+- Initial release for Wildfly 24.0.1
+
 * Wed May 19 2021 Artur Socha <asocha@redhat.com> 23.0.2-1
 - Initial release for Wildfly 23.0.2
 

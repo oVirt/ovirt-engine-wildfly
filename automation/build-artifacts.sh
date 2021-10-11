@@ -1,7 +1,7 @@
 #!/bin/sh -e
 
 # WildFly version specification
-WF_VERSION="23.0.2"
+WF_VERSION="24.0.1"
 WF_QUALIFIER="Final"
 
 # RPM version specification

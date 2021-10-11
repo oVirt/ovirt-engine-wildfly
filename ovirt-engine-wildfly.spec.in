@@ -57,6 +57,9 @@ find \
 
 
 %changelog
+* Mon Oct 11 2021 Artur Socha <asocha@redhat.com> 24.0.1-1
+- Update to upstream version 24.0.1.Final
+
 * Wed May 19 2021 Artur Socha <asocha@redhat.coim> 23.0.2-1
 - Update to upstream version 23.0.2.Final
 
