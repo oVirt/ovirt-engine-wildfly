@@ -6,7 +6,7 @@ Group:		Virtualization/Management
 License:	ASL-2.0
 URL:		http://www.ovirt.org
 BuildArch:	noarch
-Source0:	README
+Source0:	README.md
 
 Requires:	ovirt-engine-wildfly = %{version}-%{release}
 
@@ -17,7 +17,7 @@ WildFly overlay for ovirt-engine
 
 %install
 install -d -m 0755 "%{buildroot}%{_docdir}/%{name}"
-install -m 0644 "%{SOURCE0}" "%{buildroot}%{_docdir}/%{name}/README"
+install -m 0644 "%{SOURCE0}" "%{buildroot}%{_docdir}/%{name}/README.md"
 install -d -m 0755 "%{buildroot}%{_datadir}/%{name}/modules"
 
 
