@@ -6,10 +6,7 @@ src="wildfly-${WF_VERSION}.${WF_QUALIFIER}.zip"
 url="https://download.jboss.org/wildfly/${WF_VERSION}.${WF_QUALIFIER}/${src}"
 
 # Download the source:
-if [ ! -f "${src}" ]
-then
-    curl -o "${src}" "${url}"
-fi
+curl -o rpmbuild/SOURCES/"${src}" "${url}"
 
 # Generate the spec from the template:
 sed \

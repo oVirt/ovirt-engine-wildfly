@@ -59,7 +59,7 @@ jobs:
           gzip \
           java-11-openjdk-devel \
           maven \
-          rpm-build \
+          rpmdevtools \
           sed \
           tar
 
