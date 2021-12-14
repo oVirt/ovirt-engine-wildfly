@@ -6,5 +6,5 @@ installdeps:
 	dnf -y install coreutils curl dnf-utils findutils git rpmdevtools sed
 
 srpm: installdeps
-	automation/build-srpms.sh
-	cp output/$(shell sh -c "basename '$(spec)'|cut -f1 -d.")*.src.rpm $(outdir)
+	.automation/build-srpms.sh
+	find . -name '*.src.rpm' -exec cp {} $(outdir) \;
