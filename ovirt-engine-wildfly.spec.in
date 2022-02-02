@@ -37,6 +37,7 @@ function remove_shared_objects () {
 }
 remove_shared_objects solaris-x86_64
 remove_shared_objects solaris-sparcv9
+remove_shared_objects linux-s390x
 %ifarch x86_64
 remove_shared_objects linux-i686
 %endif
