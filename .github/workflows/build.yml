@@ -70,14 +70,6 @@ jobs:
     - name: Checkout sources
       uses: actions/checkout@v2
 
-    - name: Use cache for maven
-      uses: actions/cache@v2
-      with:
-        path: ~/.m2/repository
-        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-        restore-keys: |
-          ${{ runner.os }}-maven-
-
     - name: Perform build
       run: |
         .automation/build-rpm.sh $ARTIFACTS_DIR
