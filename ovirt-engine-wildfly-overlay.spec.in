@@ -8,6 +8,9 @@ URL:		http://www.ovirt.org
 BuildArch:	noarch
 Source0:	README.md
 
+# Required to assemble artifacts
+BuildRequires: rpmdevtools
+
 Requires:	ovirt-engine-wildfly = %{version}-%{release}
 
 
