@@ -7,4 +7,4 @@ installdeps:
 
 srpm: installdeps
 	.automation/build-srpm.sh
-	find . -name '*.src.rpm' -exec cp {} $(outdir) \;
+	find . -name $(shell sh -c "basename '$(spec)'|cut -f1 -d.")'*.src.rpm' -exec cp {} $(outdir) \;
