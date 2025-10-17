@@ -16,5 +16,11 @@ ARTIFACTS_DIR=${1:-exported-artifacts}
 
 
 # Build SRPMs
-source $(dirname "$(readlink -f "$0")")/build-wildfly.sh
-source $(dirname "$(readlink -f "$0")")/build-wildfly-overlay.sh
+if [ "$1" = "ovirt-engine-wildfly" ]; then
+    source $(dirname "$(readlink -f "$0")")/build-wildfly.sh
+elif [ "$1" = "ovirt-engine-wildfly-overlay" ]; then
+    source $(dirname "$(readlink -f "$0")")/build-wildfly-overlay.sh
+else
+    source $(dirname "$(readlink -f "$0")")/build-wildfly.sh
+    source $(dirname "$(readlink -f "$0")")/build-wildfly-overlay.sh
+fi
