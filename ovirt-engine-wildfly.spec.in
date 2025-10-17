@@ -2,7 +2,7 @@
 
 Name:		ovirt-engine-wildfly
 Version:	@VERSION@
-Release:	@RELEASE@%{?dist}
+Release:	@RELEASE@%{?release_suffix}%{?dist}
 Summary:	WildFly Application Server for oVirt Engine
 Group:		Virtualization/Management
 License:	ASL 2.0
