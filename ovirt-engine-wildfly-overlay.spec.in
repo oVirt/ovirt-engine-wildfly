@@ -1,6 +1,6 @@
 Name:		ovirt-engine-wildfly-overlay
 Version:	@VERSION@
-Release:	@RELEASE@%{?dist}
+Release:	@RELEASE@%{?release_suffix}%{?dist}
 Summary:	WildFly overlay for ovirt-engine
 Group:		Virtualization/Management
 License:	ASL-2.0
