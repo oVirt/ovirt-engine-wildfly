@@ -6,7 +6,7 @@ WF_QUALIFIER="Final"
 
 # RPM version specification
 RPM_VERSION="${WF_VERSION}"
-RPM_RELEASE="3"
+RPM_RELEASE="4"
 
 # Directory, where build artifacts will be stored, should be passed as the 1st parameter
 ARTIFACTS_DIR=${1:-exported-artifacts}
