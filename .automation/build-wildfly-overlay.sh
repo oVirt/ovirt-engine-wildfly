@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash -e
 
 NAME="ovirt-engine-wildfly-overlay"
 
@@ -15,9 +15,11 @@ sed \
 
 spectool --all --get-files --directory "${SRC_DIR}" "${PWD}/${NAME}.spec"
 
+# Build SRPM:
 rpmbuild \
     -bs \
-    -D "_topdir rpmbuild" \
+    -D "_topdir ${TOPDIR}" \
     -D "_sourcedir ${SRC_DIR}" \
+    --define "release_suffix ${RELEASE_SUFFIX:-}" \
     "${PWD}/${NAME}.spec"
 
