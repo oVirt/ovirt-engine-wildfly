@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/bin/bash -e
 
 # The name and source of the package
 name="ovirt-engine-wildfly"
@@ -6,7 +6,7 @@ src="wildfly-${WF_VERSION}.${WF_QUALIFIER}.zip"
 url="https://download.jboss.org/wildfly/${WF_VERSION}.${WF_QUALIFIER}/${src}"
 
 # Download the source:
-curl -o rpmbuild/SOURCES/"${src}" "${url}"
+curl -o "${TOPDIR}/SOURCES/${src}" "${url}"
 
 # Generate the spec from the template:
 sed \
@@ -17,9 +17,10 @@ sed \
     < "${name}.spec.in" \
     > "${name}.spec"
 
-# Build the source and binary packages:
+# Build SRPM:
 rpmbuild \
     -bs \
-    -D "_topdir rpmbuild" \
+    -D "_topdir ${TOPDIR}" \
+    --define "release_suffix ${RELEASE_SUFFIX:-}" \
     "${name}.spec"
 
